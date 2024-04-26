@@ -30,8 +30,9 @@ export default function Register() {
                 setError(null)
                 let token = response?.data?.token
                 createTokenCookie(token)
-                if(getToken())
+                getToken().then(token => {
                     redirectToPage('/')
+                });
             }
             else {
                 if (response?.data?.error)

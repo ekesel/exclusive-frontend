@@ -17,7 +17,7 @@ const NavBar = (props) => {
     getToken().then(token => {
       setToken(token) // Access token here
     });
-  }, [])
+  }, [currentPath])
 
   return (
     <div className={styles.wrapper}>

@@ -12,3 +12,9 @@ export const register = async (data) => {
         ...DEFAULT_HEADER
     });
 }
+
+export const login = async (data) => {
+    return await PostCall(URLS.LOGIN, { ...data }, {
+        ...DEFAULT_HEADER
+    });
+}
