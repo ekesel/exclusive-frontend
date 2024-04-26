@@ -1,0 +1,64 @@
+.container {
+    width: 100%;
+    padding: 1rem 10rem 1rem 10rem;
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.productImage {
+    width: 270px;
+    height: 250px;
+}
+
+.title {
+    font-weight: 600;
+}
+
+.price {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: row;
+    align-items: center;
+}
+
+.discountPrice {
+    color: #DB4444;
+    font-weight: 600;
+}
+
+.originalPrice {
+    text-decoration: line-through;
+}
+
+.discountPercentage {
+    padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+    border-radius: 4px;
+    background-color: #DB4444;
+    color: white;
+}
+
+.categoryCardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 170px;
+    height: 145px;
+    padding: 25px 56px 24px 55px;
+    border-radius: 4px;
+    border: 1px solid black;
+    opacity: 0px;
+}
+
+.categoryImage {
+    width: 56px;
+    height: 56px;
+}

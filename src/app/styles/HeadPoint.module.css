@@ -1,0 +1,23 @@
+.container {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 3rem;
+    padding: 2.8rem 10rem 1rem 10rem;
+    align-items: center;
+}
+
+.blob {
+    background-color: #DB4444;
+    width: 20px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.text {
+    color: #DB4444; 
+    font-weight: 600;
+    line-height: 20px;
+}

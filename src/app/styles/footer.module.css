@@ -1,0 +1,134 @@
+.container {
+    margin-top: 5rem;
+    background-color: #000000;
+}
+
+.content {
+    padding: 4rem 10rem 2rem 10rem;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: start;
+}
+
+.headText {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: white;
+}
+
+.subText {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    color: white;
+}
+
+.descTxt {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: white;
+}
+
+.searchBar {
+    background-color: black;
+    padding: 7px 12px 7px 20px;
+    border-radius: 4px;
+    opacity: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 2px solid white;
+}
+
+.searchInput {
+    outline: none;
+    border: none;
+    background-color: black;
+    color: #fafafa;
+}
+
+.searchIcon {
+    margin: auto 0.25rem auto 0;
+    background: url(../styles/images/send.svg) no-repeat center;
+    width: 1.2rem;
+    height: 1.2rem;
+    flex-shrink: 0;
+}
+
+.playstoreIcon {
+    background: url(../styles/images/playstore.svg) no-repeat center;
+    width: 100%;
+    height: 2.2rem;
+    flex-shrink: 0;
+}
+
+.appstoreIcon {
+    background: url(../styles/images/appstore.svg) no-repeat center;
+    width: 100%;
+    height: 2.2rem;
+    flex-shrink: 0;
+    margin-bottom: 1rem;
+}
+
+.socialLinks {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.linkedInIcon {
+    background: url(../styles/images/linkedin.svg) no-repeat center;
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+}
+
+.xIcon {
+    background: url(../styles/images/x.svg) no-repeat center;
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+}
+
+.instagramIcon {
+    background: url(../styles/images/instagram.svg) no-repeat center;
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+}
+
+.facebookIcon {
+    background: url(../styles/images/facebook.svg) no-repeat center;
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+}
+
+.horizontalLine {
+    border: 0.01px solid #FFFFFF;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 2rem;
+}
+
+.copyrightText {
+    color: #FFFFFF;
+}

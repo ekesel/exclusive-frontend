@@ -1,0 +1,15 @@
+.container {
+    margin-top: 4rem;
+    width: 234px;
+    height: 56px;
+    padding: 16px 48px 16px 48px;
+    border-radius: 4px 4px 4px 4px;
+    background-color: #DB4444;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    font-weight: 600;
+}

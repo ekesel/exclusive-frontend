@@ -1,0 +1,29 @@
+.container {
+    height: 48px;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    cursor: pointer;
+    color: inherit;
+}
+
+.bannerText {
+    color: #FAFAFA;
+}
+
+/* tablet */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1080px)  {
+
+}
+
+/* mobile */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+    .container {
+        padding: 2rem;
+    }
+}

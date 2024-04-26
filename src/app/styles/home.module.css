@@ -1,0 +1,21 @@
+.categoryBarImageContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.flashSaleButton {
+    display: flex;
+    justify-content: center;
+}
+
+.ImageContainer {
+    padding: 5rem 10rem 1rem 10rem;
+    width: 100%;
+
+}
+
+.imageBannerContainer {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}

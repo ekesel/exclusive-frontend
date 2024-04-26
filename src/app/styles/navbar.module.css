@@ -1,0 +1,75 @@
+.wrapper {
+    height: 7rem;
+    border-bottom: 0.1rem solid grey;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 2.8rem 10rem 2.8rem 10rem;
+}
+
+.siteNameText {
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 3%;
+    font-size: 24px;
+}
+
+.navList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.navActive {
+    border-bottom: 2px solid grey;
+}
+
+.optionArea {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: row;
+}
+
+.wishlist {
+    margin: auto 0.25rem auto 0;
+    background: url(../styles/images/heart.svg) no-repeat center;
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+}
+
+.cart {
+    margin: auto 0.25rem auto 0;
+    background: url(../styles/images/cart.svg) no-repeat center;
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+}
+
+.searchBar {
+    background-color: #F5F5F5;
+    padding: 7px 12px 7px 20px;
+    border-radius: 4px;
+    opacity: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.searchInput {
+    outline: none;
+    border: none;
+    background-color: #F5F5F5;
+}
+
+.searchIcon {
+    margin: auto 0.25rem auto 0;
+    background: url(../styles/images/search.svg) no-repeat center;
+    width: 1.2rem;
+    height: 1.2rem;
+    flex-shrink: 0;
+}
