@@ -1,7 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../styles/navbar.module.css';
+import Link from 'next/link';
+import { getToken, deleteCookie } from "../actions";
+import { usePathname } from 'next/navigation';
 
 const NavBar = (props) => {
+  const [token, setToken] = useState(null);
+  const currentPath = usePathname();
+
+  const logout = () => {
+    deleteCookie('token');
+    setToken(null)
+  }
+
+  useEffect(()=> {
+    getToken().then(token => {
+      setToken(token) // Access token here
+    });
+  }, [])
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
@@ -9,18 +26,23 @@ const NavBar = (props) => {
           <span className={styles.siteNameText}>{props?.site_name}</span>
         </div>
         <div className={styles.navList}>
-          <div className={props?.active == 'home' ? `${styles.navItem} ${styles.navActive}` : `${styles.navItem}`}>
+          <Link href={'/'} className={currentPath == '/' ? `${styles.navItem} ${styles.navActive}` : `${styles.navItem}`}><div>
               Home
-          </div>
-          <div className={props?.active == 'contact' ? `${styles.navItem} ${styles.navActive}` : `${styles.navItem}`}>
+          </div></Link>
+          <div className={currentPath == '/contact' ? `${styles.navItem} ${styles.navActive}` : `${styles.navItem}`}>
               Contact
           </div>
-          <div className={props?.active == 'about' ? `${styles.navItem} ${styles.navActive}` : `${styles.navItem}`}>
+          <div className={currentPath == '/about' ? `${styles.navItem} ${styles.navActive}` : `${styles.navItem}`}>
               About
           </div>
-          <div className={props?.active == 'login' ? `${styles.navItem} ${styles.navActive}` : `${styles.navItem}`}>
+          {token == undefined ? <Link href={'/register'} className={(currentPath == '/register') ? `${styles.navItem} ${styles.navActive}` : `${styles.navItem}`}><div>
               Sign Up
-          </div>
+          </div></Link> : <Link href={'/'}  onClick={(e)=> {
+            e.preventDefault();
+            logout()
+          }} className={`${styles.navItem}`}><div>
+              Log out
+          </div></Link>}
         </div>
         <div className={styles.optionArea}>
           <div className={styles.searchBar}>

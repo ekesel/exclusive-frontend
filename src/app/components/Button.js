@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from '../styles/Button.module.css';
 
-const Button = ({text}) => {
+const Button = ({text, customCss, onClick }) => {
   return (
-    <div className={styles.container}>
+    <div className={customCss ? customCss : styles.container} onClick={onClick}>
         <span className={styles.text}>{text}</span>
     </div>
   )

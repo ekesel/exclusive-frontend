@@ -2,7 +2,6 @@ import React from 'react';
 import styles from '../styles/footer.module.css';
 import Heading from './Heading';
 import Link from 'next/link';
-import HorizontalLine from './HorizontalLine';
 
 const Footer = ({ supportDetails, appDetails, socialLinks }) => {
     return (

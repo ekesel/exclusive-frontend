@@ -64,11 +64,7 @@ export const PostCall = async (URL, DATA, HEADER={Accept: 'application/json', 'C
       body: JSON.stringify(DATA)
     })
     if(responseRequired){
-      if(response.ok){
-        return {response: response, data: await response.json()};
-      }else{
-        throw(response)
-      }
+      return {response: response, data: await response.json()};
     }
   } catch(err) {
     throw(err);
