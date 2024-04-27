@@ -6,18 +6,33 @@ import Button from "../components/Button";
 import Link from "next/link";
 import { createTokenCookie, getToken } from "../actions";
 import { login } from "../api/login";
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
+import { deleteCookie } from "../actions";
 
 export default function Login() {
   const [error, setError] = useState(null);
   const [emailPhone, setEmailPhone] = useState(null);
   const [password, setPassword] = useState(null);
   const router = useRouter();
+  const [token, setToken] = useState(null);
+  const currentPath = usePathname();
 
   // Redirect to a different page
   const redirectToPage = (page) => {
     router.push(page);
   };
+
+  const logout = () => {
+    deleteCookie('token');
+    setToken(null)
+  }
+
+  useEffect(()=> {
+    getToken().then(token => {
+      if(token)
+        logout()
+    });
+  }, [currentPath])
 
   const loginAcc = () => {
     login({

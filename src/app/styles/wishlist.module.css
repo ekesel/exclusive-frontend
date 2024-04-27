@@ -1,0 +1,86 @@
+.container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headingText {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+}
+
+.cartBtn {
+    width: 223px;
+    height: 56px;
+    padding: 16px 48px 16px 48px;
+    border-radius: 4px;
+    background-color: white;
+    display: flex;
+    align-items: center;    
+    gap: 10px;
+    border: 1px solid black;
+    opacity: 0px;
+    justify-content: center;
+}
+
+.emptyWishList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.orderIcon {
+    margin: auto 0.25rem auto 0;
+    background: url(../styles/images/heart.svg) no-repeat center;
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.catalogue {
+    padding-top: 2rem;
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+}
+
+.HorizontalLine {
+    border: 0.5px solid rgb(185, 183, 183);
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.justProductsHeading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headPoint {
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}

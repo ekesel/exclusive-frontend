@@ -2,9 +2,9 @@ import React from 'react';
 import styles from '../styles/Catalogue.module.css';
 
 
-const Catalogue = ({ products, Card }) => {
+const Catalogue = ({ products, Card, customCss }) => {
   return (
-    <div className={styles.container}>
+    <div className={customCss ? customCss : styles.container}>
         {products.map((object, i) => <div className={styles.category}><Card data={object} /></div>)}
     </div>
   )
