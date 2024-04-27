@@ -62,3 +62,18 @@
     width: 56px;
     height: 56px;
 }
+
+.imageCart {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    justify-content: center;
+}
+
+.AddCartContainer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 0.7rem;
+    cursor: pointer;
+}

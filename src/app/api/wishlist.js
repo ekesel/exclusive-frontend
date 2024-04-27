@@ -12,3 +12,9 @@ export const getJustForYouProducts = async (data) => {
         ...DEFAULT_HEADER
     });
 };
+
+export const addToCart = async (data) => {
+    return await PostCall(URLS.ADD_TO_CART, { ...data }, {
+        ...DEFAULT_HEADER
+    });
+};

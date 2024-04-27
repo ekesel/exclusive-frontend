@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../styles/Catalogue.module.css';
 
-const ProductCard = ({ data }) => {
+const ProductCard = ({ data, onClickCart }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
 
   return (
-    <div className={styles.cardContainer} key={data?.id}>
-        <div className={''}>
-            <img src={data?.image} className={styles.productImage}>
-            </img>
+    <div className={styles.cardContainer} key={data?.id} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <div className={styles.imageCart}>
+            <img src={data?.image} className={styles.productImage}></img>
+            {isHovered && <div className={styles.AddCartContainer} onClick={(e) => {
+              e.preventDefault();
+              onClickCart([data?.id])
+            }}>{'Add To Cart'}</div>}
         </div>
         <div className={styles.title}>
             {data?.name}

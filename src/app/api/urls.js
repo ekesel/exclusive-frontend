@@ -6,5 +6,6 @@ export const URLS = {
   REGISTER: BASE_URL + "/register",
   LOGIN: BASE_URL + "/login",
   GET_WISHLIST: BASE_URL + "/get_wishlist",
-  GET_JUST_FOR_YOU_PRODUCTS: BASE_URL + "/get_just_for_you_products"
+  GET_JUST_FOR_YOU_PRODUCTS: BASE_URL + "/get_just_for_you_products",
+  ADD_TO_CART: BASE_URL + "/add_to_cart"
 };

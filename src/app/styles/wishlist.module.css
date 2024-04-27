@@ -34,6 +34,7 @@
     border: 1px solid black;
     opacity: 0px;
     justify-content: center;
+    cursor: pointer;
 }
 
 .emptyWishList {
