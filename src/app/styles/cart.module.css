@@ -1,0 +1,69 @@
+.container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.breadcrumbRow {
+    color: rgb(117, 115, 115);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.breadcrumbRowActive {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    color: rgba(0, 0, 0, 1);
+}
+
+.cartTable {
+    padding-left: 1rem;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.tableHead {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headRow {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    flex: 0 0 auto; /* Reset flex-grow and flex-shrink to 0, and let flex-basis determine the initial size */
+    flex-basis: 300px; /* Set the initial size to 200 pixels */
+}
+
+.productImage {
+    width: 54px;
+    height: 54px;
+}
+
+.tableRows {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tableRow {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    flex: 0 0 auto; /* Reset flex-grow and flex-shrink to 0, and let flex-basis determine the initial size */
+    flex-basis: 300px; /* Set the initial size to 200 pixels */
+}
+
+.productQuantity {
+    padding: 0.5rem;
+    width: 60px;
+}

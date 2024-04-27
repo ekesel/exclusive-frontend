@@ -14,7 +14,7 @@ import { toast } from 'react-toastify';
 export default function Wishlist() {
     const [token, setToken] = useState(null);
     const currentPath = usePathname();
-    const [itemsCount, setItemsCount] = useState(4)
+    const [itemsCount, setItemsCount] = useState(0)
     const [products, setProducts] = useState([])
     const [allProducts, setAllProducts] = useState([])
 

@@ -66,7 +66,10 @@ const NavBar = (props) => {
             e.preventDefault();
             redirectToPage('/wishlist')
           }}></div>
-            <div className={styles.cart}></div></>}
+            <div className={styles.cart} onClick={(e)=> {
+            e.preventDefault();
+            redirectToPage('/cart')
+          }}></div></>}
           {token && <div className={styles.dropdown}>
             <div className={accountDrop ? styles.accountEnabled : styles.account} onClick={(e) => {
               e.preventDefault();
