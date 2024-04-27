@@ -6,6 +6,8 @@ import TopBanner from "./components/TopBanner";
 import { loginConfig } from "./api/login";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +18,7 @@ export default function RootLayout({ children }) {
   const [appDetails, setAppDetails] = useState([]);
   const [socialLinks, setSocialLinks] = useState([]);
 
-  useEffect(()=> {
+  useEffect(() => {
     loginConfig({}).then((response) => {
       setTopBanner(response?.data?.top_banner);
       setSiteName(response?.data?.site_name)
@@ -29,6 +31,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <ToastContainer />
         <TopBanner data={topBanner} />
         <NavBar site_name={siteName} active={'login'} />
         {children}

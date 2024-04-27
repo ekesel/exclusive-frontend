@@ -9,6 +9,7 @@ import { getToken } from "../actions";
 import { usePathname } from 'next/navigation';
 import HorizontalLine from "../components/HorizontalLine";
 import HeadPoint from "../components/HeadPoint";
+import { toast } from 'react-toastify';
 
 export default function Wishlist() {
     const [token, setToken] = useState(null);
@@ -51,6 +52,7 @@ export default function Wishlist() {
             'product_ids': data
         }).then((response) => {
             if(response.response.status == 200) {
+                toast.success("Added To Cart!");
                 getWishlist({
                     'token': token?.value
                 }).then((response) => {
@@ -65,7 +67,7 @@ export default function Wishlist() {
                 });
             }
             else {
-                console.log("FAILED TO ADD TO CART");
+                toast.error("Uh-Oh! Failed To Add!");
             }
         });
     }
@@ -96,7 +98,7 @@ export default function Wishlist() {
                     <Button text={'See All'} customCss={styles.cartBtn} />
                 </div>
                 <div className={styles.items}>
-                    {allProducts.length > 0 ? <Catalogue products={allProducts} Card={ProductCard} customCss={styles.catalogue} /> : <div className={styles.emptyWishList}>
+                    {allProducts.length > 0 ? <Catalogue products={allProducts} Card={ProductCard} customCss={styles.catalogue} onClickCart={addCart} /> : <div className={styles.emptyWishList}>
                         <div className={styles.orderIcon}></div>
                         <div className={styles.emptyText}>{'No Products!'}</div>
                     </div>
