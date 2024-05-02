@@ -38,8 +38,10 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    flex: 0 0 auto; /* Reset flex-grow and flex-shrink to 0, and let flex-basis determine the initial size */
-    flex-basis: 300px; /* Set the initial size to 200 pixels */
+    flex: 0 0 auto;
+    /* Reset flex-grow and flex-shrink to 0, and let flex-basis determine the initial size */
+    flex-basis: 300px;
+    /* Set the initial size to 200 pixels */
 }
 
 .productImage {
@@ -59,11 +61,126 @@
     flex-direction: row;
     gap: 1rem;
     align-items: center;
-    flex: 0 0 auto; /* Reset flex-grow and flex-shrink to 0, and let flex-basis determine the initial size */
-    flex-basis: 300px; /* Set the initial size to 200 pixels */
+    flex: 0 0 auto;
+    /* Reset flex-grow and flex-shrink to 0, and let flex-basis determine the initial size */
+    flex-basis: 300px;
+    /* Set the initial size to 200 pixels */
 }
 
 .productQuantity {
     padding: 0.5rem;
     width: 60px;
+}
+
+.btnContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.cartBtn {
+    width: 223px;
+    height: 56px;
+    padding: 16px 48px 16px 48px;
+    border-radius: 4px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid black;
+    opacity: 0px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.lowerContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.couponContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.couponBar {
+    min-width: 250px;
+    height: 56px;
+    padding: 16px 164px 16px 24px;
+    gap: 0px;
+    border-radius: 4px;
+    border: 1px solid black;
+    opacity: 0px;
+}
+
+.couponInput {
+    outline: none;
+    border: none;
+    min-width: 200px;
+}
+
+.couponBtn {
+    width: 210px;
+    height: 56px;
+    padding: 16px 48px 16px 48px;
+    border-radius: 4px 4px 4px 4px;
+    background-color: #DB4444;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.billingContainer {
+    width: 470px;
+    height: 324px;
+    gap: 0px;
+    border-radius: 4px;
+    border: 1.5px solid black;
+    opacity: 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.totalText {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.billingRows {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.HorizontalLine {
+    border: 0.5px solid rgb(185, 183, 183);
+}
+
+.checkoutContainer {
+    padding: 2rem;
+    align-self: center;
+}
+
+.checkoutBtn {
+    width: 260px;
+    height: 56px;
+    padding: 16px 48px 16px 48px;
+    border-radius: 4px 4px 4px 4px;
+    background-color: #DB4444;
+    color: white;
+    display: flex;
+    align-items: center;
 }

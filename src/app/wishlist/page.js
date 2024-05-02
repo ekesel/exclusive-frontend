@@ -6,7 +6,7 @@ import Catalogue from "../components/Catalogue";
 import ProductCard from "../components/ProductCard";
 import { getWishlist, getJustForYouProducts, addToCart } from "../api/wishlist";
 import { getToken } from "../actions";
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import HorizontalLine from "../components/HorizontalLine";
 import HeadPoint from "../components/HeadPoint";
 import { toast } from 'react-toastify';
@@ -17,32 +17,44 @@ export default function Wishlist() {
     const [itemsCount, setItemsCount] = useState(0)
     const [products, setProducts] = useState([])
     const [allProducts, setAllProducts] = useState([])
+    const router = useRouter();
+
+    // Redirect to a different page
+    const redirectToPage = (page) => {
+        router.push(page);
+    };
 
     useEffect(() => {
         getToken().then(token => {
-            setToken(token) // Access token here
-            getWishlist({
-                'token': token?.value
-            }).then((response) => {
-                if(response.response.status == 200) {
-                    setProducts(response?.data)
-                    setItemsCount(response?.data.length)
-                }
-                else {
-                    setProducts([])
-                    setItemsCount(0)
-                }
-            });
-            getJustForYouProducts({
-                'token': token?.value
-            }).then((response) => {
-                if(response.response.status == 200) {
-                    setAllProducts(response?.data)
-                }
-                else {
-                    setAllProducts([])
-                }
-            });
+            if (token) {
+                setToken(token) // Access token here
+                getWishlist({
+                    'token': token?.value
+                }).then((response) => {
+                    if (response.response.status == 200) {
+                        setProducts(response?.data)
+                        setItemsCount(response?.data.length)
+                    }
+                    else {
+                        setProducts([])
+                        setItemsCount(0)
+                    }
+                });
+                getJustForYouProducts({
+                    'token': token?.value
+                }).then((response) => {
+                    if (response.response.status == 200) {
+                        setAllProducts(response?.data)
+                    }
+                    else {
+                        setAllProducts([])
+                    }
+                });
+            }
+            else {
+                toast.info('Please login first to add items')
+                redirectToPage('/login')
+            }
         });
     }, [currentPath])
 
@@ -51,12 +63,12 @@ export default function Wishlist() {
             'token': token?.value,
             'product_ids': data
         }).then((response) => {
-            if(response.response.status == 200) {
+            if (response.response.status == 200) {
                 toast.success("Added To Cart!");
                 getWishlist({
                     'token': token?.value
                 }).then((response) => {
-                    if(response.response.status == 200) {
+                    if (response.response.status == 200) {
                         setProducts(response?.data)
                         setItemsCount(response?.data.length)
                     }
