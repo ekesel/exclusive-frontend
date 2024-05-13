@@ -1,4 +1,4 @@
-const BASE_URL = "http://0.0.0.0:7000/api"
+const BASE_URL = "https://exclusive.pythonanywhere.com/api"
 
 export const URLS = {
   HOMEPAGE_CONFIG: BASE_URL + "/homepageconfigs",
